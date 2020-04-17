@@ -1,2 +1,2 @@
 # Tams
-showning you
+showing you
