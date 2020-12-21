@@ -11,7 +11,7 @@ var instructions = [];
 var insText = 'T A M A';
 
 function preload() {
-    font = loadFont('AvenirNextLTPro-Demi.otf');
+    font = loadFont('Font/AvenirNextLTPro-Demi.otf');
 }
 
 function setup() {
