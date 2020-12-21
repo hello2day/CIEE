@@ -20,7 +20,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(450, 500);
+  createCanvas(470, 500);
     background(0);
 
     var bounds = font.textBounds(formattedTime, 10, 10, 192);
@@ -104,11 +104,11 @@ function updateText(newText) {
     //}
 
   formattedTime = newText;
-    var bounds = font.textBounds(formattedTime, 0, 0, 105);
+    var bounds = font.textBounds(formattedTime, 0, 0, 110);
   var posx = width / 8 - bounds.w / 8;
     var posy = height / 2 + bounds.h / 2;
 
-    var points = font.textToPoints(formattedTime, posx, posy, 105, {
+    var points = font.textToPoints(formattedTime, posx, posy, 110, {
         sampleFactor: 0.1
     });
 
