@@ -1,3 +1,8 @@
+
+// http://codingtra.in
+// Steering Text Paths
+// I added the functionality to make the particles change into another text and changed the positioning of the text to always be in the middle of the canvas
+
 var font;
 var vehicles = [];
 
@@ -8,21 +13,21 @@ var prevSec = -1;
 var maxChangeForce = 0;
 
 var instructions = [];
-var insText = 'TAMA';
+var insText = 'T A M A';
 
 function preload() {
-    font = loadFont('Font/AvenirNextLTPro-Demi.otf');
+    font = loadFont('AvenirNextLTPro-Demi.otf');
 }
 
 function setup() {
-    createCanvas(500, 500);
+  createCanvas(500, 500);
     background(0);
 
-    var bounds = font.textBounds(formattedTime, 0, 0, 192);
-    var posx = width / 2 - bounds.w / 2;
+    var bounds = font.textBounds(formattedTime, 10, 10, 192);
+    var posx = width / 2- bounds.w / 2;
     var posy = height / 2 + bounds.h / 2;
 
-    var points = font.textToPoints(formattedTime, posx, posy, 192, {
+    var points = font.textToPoints(formattedTime, 10, 10, 192, {
         sampleFactor: 0.1
     });
 
@@ -98,11 +103,11 @@ function updateText(newText) {
     //}
 
   formattedTime = newText;
-    var bounds = font.textBounds(formattedTime, 0, 0, 192);
-    var posx = width / 2 - bounds.w / 2;
+    var bounds = font.textBounds(formattedTime, 0, 0, 110);
+  var posx = width / 7 - bounds.w / 8;
     var posy = height / 2 + bounds.h / 2;
 
-    var points = font.textToPoints(formattedTime, posx, posy, 192, {
+    var points = font.textToPoints(formattedTime, posx, posy, 110, {
         sampleFactor: 0.1
     });
 
