@@ -109,7 +109,7 @@ function updateText(newText) {
     var posy = height / 2 + bounds.h / 2;
 
     var points = font.textToPoints(formattedTime, posx, posy, 110, {
-        sampleFactor: 0.2
+        sampleFactor: 0.1
     });
 
     if (points.length < vehicles.length) {
