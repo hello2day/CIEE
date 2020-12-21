@@ -1,8 +1,3 @@
-
-// http://codingtra.in
-// Steering Text Paths
-// I added the functionality to make the particles change into another text and changed the positioning of the text to always be in the middle of the canvas
-
 var font;
 var vehicles = [];
 
