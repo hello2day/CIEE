@@ -8,7 +8,7 @@ function Vehicle(x, y, size) {
     if (size != null) {
         this.r = size;
     } else {
-      this.r = 3;
+      this.r = 4;
     }
     this.maxspeed = 10;
     this.maxforce =1;
