@@ -1,5 +1,4 @@
 
-
 function Vehicle(x, y, size) {
     this.pos = createVector(random(width), random(height));
     this.target = createVector(x, y);
