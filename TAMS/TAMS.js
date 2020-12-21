@@ -1,3 +1,8 @@
+
+// http://codingtra.in
+// Steering Text Paths
+// I added the functionality to make the particles change into another text and changed the positioning of the text to always be in the middle of the canvas
+
 var font;
 var vehicles = [];
 
@@ -8,22 +13,23 @@ var prevSec = -1;
 var maxChangeForce = 0;
 
 var instructions = [];
-var insText = 'T A M A';
+var insText = '"akan ada hari baik"';
 
 function preload() {
     font = loadFont('Font/AvenirNextLTPro-Demi.otf');
 }
 
 function setup() {
-  createCanvas(500, 500);
-    background(0);
+  createCanvas(480, 500);
+    background(60);
 
     var bounds = font.textBounds(formattedTime, 10, 10, 192);
-    var posx = width / 2- bounds.w / 2;
-    var posy = height / 2 + bounds.h / 2;
+    var posx = width / 2- bounds.w / 4;
+    var posy = height / 2 + bounds.h / 4;
 
-    var points = font.textToPoints(formattedTime, 10, 10, 192, {
+    var points = font.textToPoints(formattedTime, posx, posy, 192, {
         sampleFactor: 0.1
+			
     });
 
     for (var i = 0; i < points.length; i++) {
@@ -33,7 +39,7 @@ function setup() {
     }
 
     var boundsIns = font.textBounds(insText, 0, 0, 30);
-    var posxIns = width / 2 - boundsIns.w / 2;
+    var posxIns = width /2.3 - boundsIns.w / 2;
     var posyIns = height / 6 + boundsIns.h / 2;
 
     var insAr = split(insText, ' ');
@@ -43,22 +49,22 @@ function setup() {
         var posx2 = posxIns;
         var posy2 = posyIns;
 
-        posxIns += bounds2.w + 10;
+        posxIns += bounds2.w + 30;
 
-        var points2 = font.textToPoints(insAr[i], posx2, posy2, 30, {
-            sampleFactor: 0.3
+        var points2 = font.textToPoints(insAr[i], posx2, posy2, 35, {
+            sampleFactor: 0.6
         });
 
         for (var j = 0; j < points2.length; j++) {
             var pt = points2[j];
-            var v = new Vehicle(pt.x, pt.y, 3);
+            var v = new Vehicle(pt.x, pt.y, 2);
             instructions.push(v);
         }
     }
 }
 
 function draw() {
-    background(0);
+    background(60);
   
   calcTime();
 
@@ -99,11 +105,11 @@ function updateText(newText) {
 
   formattedTime = newText;
     var bounds = font.textBounds(formattedTime, 0, 0, 110);
-  var posx = width / 7 - bounds.w / 8;
+  var posx = width / 8 - bounds.w / 8;
     var posy = height / 2 + bounds.h / 2;
 
     var points = font.textToPoints(formattedTime, posx, posy, 110, {
-        sampleFactor: 0.1
+        sampleFactor: 0.2
     });
 
     if (points.length < vehicles.length) {
