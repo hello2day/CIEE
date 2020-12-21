@@ -16,12 +16,12 @@ var instructions = [];
 var insText = '"akan ada hari baik"';
 
 function preload() {
-    font = loadFont('Font/AvenirNextLTPro-Demi.otf');
+    font = loadFont('AvenirNextLTPro-Demi.otf');
 }
 
 function setup() {
   createCanvas(480, 500);
-    background(0);
+    background(60);
 
     var bounds = font.textBounds(formattedTime, 10, 10, 192);
     var posx = width / 2- bounds.w / 4;
@@ -64,7 +64,7 @@ function setup() {
 }
 
 function draw() {
-    background(0);
+    background(60);
   
   calcTime();
 
