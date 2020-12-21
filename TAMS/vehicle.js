@@ -1,3 +1,8 @@
+// Daniel Shiffman
+// http://codingtra.in
+// Steering Text Paths
+// Video: [coming soon]
+
 function Vehicle(x, y, size) {
     this.pos = createVector(random(width), random(height));
     this.target = createVector(x, y);
@@ -6,7 +11,7 @@ function Vehicle(x, y, size) {
     if (size != null) {
         this.r = size;
     } else {
-        this.r = 7;
+      this.r = 3;
     }
     this.maxspeed = 10;
     this.maxforce =1;
