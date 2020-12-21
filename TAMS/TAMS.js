@@ -21,7 +21,7 @@ function preload() {
 
 function setup() {
   createCanvas(480, 500);
-    background(00);
+    background(60);
 
     var bounds = font.textBounds(formattedTime, 10, 10, 192);
     var posx = width / 2- bounds.w / 4;
@@ -64,7 +64,7 @@ function setup() {
 }
 
 function draw() {
-    background(0);
+    background(60);
   
   calcTime();
 
