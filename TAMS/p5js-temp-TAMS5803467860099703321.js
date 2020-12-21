@@ -21,7 +21,7 @@ function preload() {
 
 function setup() {
   createCanvas(480, 500);
-    background(60);
+    background(0);
 
     var bounds = font.textBounds(formattedTime, 10, 10, 192);
     var posx = width / 2- bounds.w / 4;
@@ -64,7 +64,7 @@ function setup() {
 }
 
 function draw() {
-    background(60);
+    background(0);
   
   calcTime();
 
@@ -109,7 +109,7 @@ function updateText(newText) {
     var posy = height / 2 + bounds.h / 2;
 
     var points = font.textToPoints(formattedTime, posx, posy, 110, {
-        sampleFactor: 0.2
+        sampleFactor: 0.1
     });
 
     if (points.length < vehicles.length) {
