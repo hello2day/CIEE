@@ -20,8 +20,8 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(480, 500);
-    background(60);
+  createCanvas(450, 500);
+    background(0);
 
     var bounds = font.textBounds(formattedTime, 10, 10, 192);
     var posx = width / 2- bounds.w / 4;
@@ -39,7 +39,7 @@ function setup() {
     }
 
     var boundsIns = font.textBounds(insText, 0, 0, 30);
-    var posxIns = width /2.3 - boundsIns.w / 2;
+    var posxIns = width /2.4 - boundsIns.w / 2;
     var posyIns = height / 6 + boundsIns.h / 2;
 
     var insAr = split(insText, ' ');
@@ -64,7 +64,7 @@ function setup() {
 }
 
 function draw() {
-    background(60);
+    background(0);
   
   calcTime();
 
@@ -104,11 +104,11 @@ function updateText(newText) {
     //}
 
   formattedTime = newText;
-    var bounds = font.textBounds(formattedTime, 0, 0, 110);
+    var bounds = font.textBounds(formattedTime, 0, 0, 105);
   var posx = width / 8 - bounds.w / 8;
     var posy = height / 2 + bounds.h / 2;
 
-    var points = font.textToPoints(formattedTime, posx, posy, 110, {
+    var points = font.textToPoints(formattedTime, posx, posy, 105, {
         sampleFactor: 0.1
     });
 
