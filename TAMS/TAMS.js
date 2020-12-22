@@ -13,7 +13,7 @@ var prevSec = -1;
 var maxChangeForce = 0;
 
 var instructions = [];
-var insText = '"akan ada hari baik"';
+var insText = '"SEMANGAT!!"';
 
 function preload() {
     font = loadFont('Font/AvenirNextLTPro-Demi.otf');
