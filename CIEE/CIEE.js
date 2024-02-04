@@ -11,7 +11,7 @@ function setup() {
 
   // textToPoints has 'text', x location in canvas, y location, and font size
   // creates all of the points from the text passcode
-  var points = font.textToPoints('JILAN T.H',75,400, 70);
+  var points = font.textToPoints('Intan Kusumaningrum',10,400, 70);
 
   //  for each point in the text, create a random start position and a vector to where it needs to end up
   for (var i=0; i < points.length; i++){
